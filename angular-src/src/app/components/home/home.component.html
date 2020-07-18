@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-sm-6">
+        <div class="row-md-2 text-center">
+            <img src="assets/img/picx.jpg" height="100%" width="100%">
+        </div>
+    </div>
+  <div class="col-sm-5">
+    <div class="jumbotron text-center" style="height: 600px">
+      <h1 style="text-shadow: 2px 2px green;">TXTr</h1>
+      <h3>Be together, whenever.</h3>
+      <p class="lead">Discover the seamless experience of online chat app.</p>
+      <p>A simple way to text, group chat and</p>
+      <p> plan things all in one place.</p><br>
+      <div *ngIf="!this.authService.loggedIn()">
+        <a class="btn btn-info" [routerLink]="['/register']">Create an account</a><br><br>
+        <a class="btn btn-info" [routerLink]="['/login']">Already registered</a>
+      </div>
+      <div *ngIf="this.authService.loggedIn()">
+        <a class="btn btn-primary" [routerLink]="['/chat']">Chat Room</a>
+      </div><br>
+      <p>Say everything better :)</p>
+    </div>
+  </div>
+</div>
