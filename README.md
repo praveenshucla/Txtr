@@ -1,1 +1,1 @@
-# Txtr
+# Txtr - Web based chat application
